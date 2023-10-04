@@ -17,13 +17,15 @@ app.use(cors())
 const userRoute = require(`./routes/user.routes`)
 const kamarRoute = require(`./routes/kamar.routes`)
 const tipe_kamarRoute = require(`./routes/tipe_kamar.routes`)
-const pemesananRoute = require(`./routes/pemesanan.routes`)   
+const pemesananRoute = require(`./routes/pemesanan.routes`)
+const detail_pemesananRoute = require(`./routes/pemesanan.routes`)    
 
 /** define prefix for each route */ 
 app.use(`/user`, userRoute) 
 app.use(`/kamar`, kamarRoute)
 app.use(`/tipe_kamar`, tipe_kamarRoute)  
 app.use(`/pemesanan`, pemesananRoute) 
+app.use(`/detail_pemesanan`, detail_pemesananRoute) 
 
 /** run server based on defined port */
 app.listen(PORT, () => { 
